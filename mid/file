@@ -1,0 +1,153 @@
+[8:47 PM, 4/4/2026] Farhan: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    
+    
+
+</head>
+<body>
+     <form>
+        <div>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname">
+            </div>
+            <div>
+                <label for="sname">Second Name</label>
+                <input type="text" id="sname">
+            </div>
+             <div>
+                <label for="age">Age</label>
+                <input type="text" id="age">
+            </div>
+
+            <button id="btn" type="button">Check</button>
+        </div>
+       <p id="demo"></p>
+     </form>
+
+     <script >
+     let f…
+[8:48 PM, 4/4/2026] Bushra: Ok😍
+[8:48 PM, 4/4/2026] Farhan: <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+    
+    <style>
+        /* Reset some defaults */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #f5f5f5;
+        }
+
+        form {
+            background: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 320px;
+        }
+
+        form div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        button#btn {
+            width: 100%;
+            padding: 10px 0;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button#btn:hover {
+            background-color: #45a049;
+        }
+
+        p#demo {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #c91717;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+     <form>
+        <div>
+            <div>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname">
+            </div>
+            <div>
+                <label for="sname">Second Name</label>
+                <input type="text" id="sname">
+            </div>
+             <div>
+                <label for="age">Age</label>
+                <input type="text" id="age">
+            </div>
+
+            <button id="btn" type="button">Check</button>
+        </div>
+       <p id="demo"></p>
+     </form>
+
+     <script >
+     let finput = document.getElementById('fname')
+let sinput = document.getElementById('sname')
+let ageinput = document.getElementById('age')
+let para = document.getElementById('demo')
+let checkbtn = document.getElementById('btn')
+
+
+checkbtn.addEventListener('click', function(e){
+    e.preventDefault();
+
+    if(ageinput.value > 18){
+        para.innerText = "Name: " + finput.value + " "+ sinput.value + " age: " + ageinput.value + " comment: You are adult"
+    }
+    else if(isNaN(ageinput)){
+        para.innerText = "Not valid"
+    }
+    else{
+        para.innerText = "Name: " + finput.value + sinput.value + " age: " + ageinput.value + "comment: You are Minor"
+    }
+
+})   </script>
+</body>
+</html>
